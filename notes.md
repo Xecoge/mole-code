@@ -1,4 +1,5 @@
-Mole Code 1.2.1 (PC) / 1.2.3 (Android)
-- Reasoning selector now appears for any provider, including your own custom API / proxy, whenever the model supports it (Claude, GPT-5, o-series, Gemini 2.5+, DeepSeek R1, Qwen3, Grok, gpt-oss, Kimi K2, GLM 4.5+ and more).
-- "Off" no longer sends a reasoning parameter to models that don't need one.
-- If a server doesn't accept the reasoning parameter, the app retries without it automatically.
+Mole Code 1.2.2 (PC) / 1.2.4 (Android)
+- Reasoning is now detected for real, not guessed from the model name. Mole checks each model once: it asks the server (OpenRouter, Ollama) or sends a short test request and looks at whether the model actually reasons.
+- Mole also finds which parameter really controls reasoning on your server (reasoning_effort, reasoning, thinking, enable_thinking), so the selector actually changes the model's behavior, including on your own API or proxy.
+- The selector shows only the levels that work: Off / On for models that can only be switched on or off, no "Off" for models that always reason, and no selector for models without reasoning.
+- "Re-check the model" is in the reasoning menu.
