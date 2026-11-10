@@ -1,5 +1,6 @@
-Mole Code 1.2.2 (PC) / 1.2.4 (Android)
-- Reasoning is now detected for real, not guessed from the model name. Mole checks each model once: it asks the server (OpenRouter, Ollama) or sends a short test request and looks at whether the model actually reasons.
-- Mole also finds which parameter really controls reasoning on your server (reasoning_effort, reasoning, thinking, enable_thinking), so the selector actually changes the model's behavior, including on your own API or proxy.
-- The selector shows only the levels that work: Off / On for models that can only be switched on or off, no "Off" for models that always reason, and no selector for models without reasoning.
-- "Re-check the model" is in the reasoning menu.
+Mole Code 1.2.2 (PC) / 1.2.5 (Android)
+- Android: the reasoning selector appears instantly for models known to reason (Claude, GPT-5, o-series, Gemini 2.5+/3, Qwen3, DeepSeek R1, Grok, gpt-oss and more), including on your own API.
+- Android: the check runs silently in the background, and all test requests go at once, so it takes about as long as one short reply.
+- Android: if your server hides the model's reasoning, the selector stays (chosen by model name) instead of disappearing.
+- Android: if the server rejects one way of sending reasoning, Mole automatically tries the others and remembers the one that works.
+- PC 1.2.2: reasoning is detected by a real check, and the selector shows only the levels that work.
